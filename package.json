@@ -12,6 +12,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "homepage": "https://weite122.github.io/project-react-1/"
+    "homepage": "https://weite122.github.io/project-react-1/build"
   }
 }
