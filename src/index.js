@@ -6,7 +6,7 @@ import registerServiceWorker from './registerServiceWorker';
 import Welcome from './Welcome'
 
 ReactDOM.render(
-  <Welcome/>,
+  <Welcome name = "weite122"/>,
   document.getElementById('root')
 )
 
