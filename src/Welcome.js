@@ -1,5 +1,19 @@
 import React from 'react';
-function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
+class Welcome extends React.Component{
+  constructor(props){
+    super(props)
+    this.state = {
+      data: new Date()
+    }
+  }
+  render(){
+    return(
+      <div>
+        <h1>Hello, {this.props.name}</h1>
+        <h2>{this.state.date.toString()}</h2>
+      </div>
+    )
+  }
+
 }
 export default Welcome
