@@ -23,24 +23,32 @@ class App extends Component {
           <TodoItem todo={item} />
         </li>)
     })
-    console.log(todos)
+
     return (
       <div className="App">
         <h1>我的待办</h1>
         <div className="inputWrapper"></div>
-        <TodoInput content={this.state.newTode} onSubmit={this.addTodo.bind(this)}/>
+        <TodoInput content={this.state.newTode}
+         onChange={this.changeTitle.bind(this)}
+         onSubmit={this.addTodo.bind(this)}/>
         <ol>
           {todos}
         </ol>
       </div>
     )
   }
-addTodo(event){
-  this.state.todoList.push({
-    id: idMaker(),
-    title: event.target.value,
-    status: null,
-    deleted: false
+  changeTitle(event){
+    this.setState({
+      newTodo: event.target.value,
+      todoList: this.state.todoList
+    })
+  }
+  addTodo(event){
+    this.state.todoList.push({
+      id: idMaker(),
+      title: event.target.value,
+      status: null,
+      deleted: false
   })
   this.setState({
     newTodo: '',
