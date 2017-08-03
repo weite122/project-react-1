@@ -34,7 +34,7 @@ class App extends Component {
         <TodoInput content={this.state.newTode}
          onChange={this.changeTitle.bind(this)}
          onSubmit={this.addTodo.bind(this)}/>
-        <ol>
+        <ol className="todoList">
           {todos}
         </ol>
       </div>
