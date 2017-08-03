@@ -3,7 +3,7 @@ class Welcome extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-      data: new Date()
+      date: new Date()
     }
   }
   render(){
