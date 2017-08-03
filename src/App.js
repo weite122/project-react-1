@@ -23,6 +23,7 @@ class App extends Component {
           <TodoItem todo={item} />
         </li>)
     })
+    console.log(todos)
     return (
       <div className="App">
         <h1>我的待办</h1>
