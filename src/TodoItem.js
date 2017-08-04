@@ -6,7 +6,7 @@ export default class TodoItem extends Component {
     return (
       <div className="TodoItem">
       <div className="flatRoundedCheckbox">
-      <input type="checkbox" className="flatRoundedCheckbox" id="flatOneRoundedCheckbox" checked={this.props.todo.status === 'completed'}
+      <input type="checkbox" id="flatOneRoundedCheckbox" checked={this.props.todo.status === 'completed'}
         onChange={this.toggle.bind(this)}/> 
         <label for="flatOneRoundedCheckbox"></label>
         <div></div>
