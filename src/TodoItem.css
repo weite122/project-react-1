@@ -54,6 +54,6 @@
   background: #4fbe79;
 }
 
-.flatRoundedCheckbox input[type=checkbox]:checked~label {
+.TodoItem .flatRoundedCheckbox input[type=checkbox]:checked~label {
   left: 42px;
 } 
