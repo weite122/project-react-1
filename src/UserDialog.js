@@ -54,7 +54,7 @@ export default class UserDialog extends Component{
             <form className="signIn" onSubmit={this.signIn.bind(this)}>{/* 登录*/}
                 <div className="row">
                     <label>用户名</label>
-                    <input type="text" value={this.satte.formData.username} 
+                    <input type="text" value={this.state.formData.username} 
                     onChange={this.changeUsername.bind(this)}/>
                 </div>
                 <div className="row">
