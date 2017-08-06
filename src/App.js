@@ -45,8 +45,8 @@ class App extends Component {
        {this.state.user.id ? 
           null :
           <UserDialog 
-          onSignUp={this.onSignUpOrsignIn.bind(this)}
-          onSignIn={this.onSignUpOrsignIn.bind(this)}/>}
+          onSignUp={this.onSignUpOrSignIn.bind(this)}
+          onSignIn={this.onSignUpOrSignIn.bind(this)}/>}
       </div>
     )
   }
