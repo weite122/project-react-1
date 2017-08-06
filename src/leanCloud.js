@@ -44,7 +44,7 @@ export function getCurrentUser(){
   }
 }
 export function signOut(){
-  AV.user.logOut()
+  AV.User.logOut()
   return undefined
 }
 
