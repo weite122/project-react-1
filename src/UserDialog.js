@@ -28,9 +28,15 @@ export default class UserDialog extends Component{
         case 202:
           alert('用户名已被占用')
           break
-          default:
-          alert(error)
+        case 126:
+        alert('无效的用户 Id，可能用户不存在')
           break
+        case 139:  
+        alert('角色名称非法，角色名称只能以英文字母、数字或下划线组成')
+          break
+        default:
+        alert(error)
+        break    
       }
     }
     signUp(username, password, success, error)
@@ -46,9 +52,18 @@ export default class UserDialog extends Component{
         case 210:
         alert('用户名与密码不匹配')
         break
+        case 200:
+        alert('没有提供用户名，或者用户名为空')
+        break
+        case 201:
+        alert('没有提供密码，或者密码为空')
+        break
+        case 211:
+        alert('找不到用户')
+        break
         default:
         alert(error)
-        break
+        break    
       }
     }
     signIn(username, password, success, error)

@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "anywhere": "^1.4.0",
     "leancloud-realtime": "^3.5.5",
     "leancloud-storage": "^3.0.4",
     "normalize.css": "^7.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-scripts": "1.0.10"
+    "react-scripts": "1.0.10",
+    "webpack-dev-server": "^2.6.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -16,7 +18,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "server": "anywhere --port 8001   "
   },
   "homepage": "https://weite122.github.io/project-react-1/build",
   "devDependencies": {
