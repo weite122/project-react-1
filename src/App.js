@@ -52,12 +52,12 @@ class App extends Component {
   }
   signOut(){
     signOut()
-    let stateCopy = JSON.parse(JSON.stringify(this.state))
+    let stateCopy = JsonConvert(this.state)
     stateCopy.user = {}
     this.setState(stateCopy)
   }
   onSignUpOrSignIn(user){
-    let stateCopy = JSON.parse(JSON.stringify(this.state)) 
+    let stateCopy = JsonConvert(this.state)
     stateCopy.user = user
     this.setState(stateCopy)
   }
@@ -67,6 +67,7 @@ class App extends Component {
     todo.status = todo.status === 'completed' ? '' : 'completed'
     this.setState(this.state) 
   }
+  
   changeTitle(event){
     this.setState({
       newTodo: event.target.value,
@@ -98,4 +99,7 @@ let id = 0
 function idMaker(){
   id += 1
   return id
+}
+function JsonConvert(obj){
+  return JSON.parse(JSON.stringify(obj))
 }

@@ -25,6 +25,9 @@ export default class UserDialog extends Component{
     }
     let error = (error)=>{
       switch(error.code){
+        default:
+        alert(error)
+        break  
         case 202:
           alert('用户名已被占用')
           break
@@ -33,10 +36,7 @@ export default class UserDialog extends Component{
           break
         case 139:  
         alert('角色名称非法，角色名称只能以英文字母、数字或下划线组成')
-          break
-        default:
-        alert(error)
-        break    
+          break  
       }
     }
     signUp(username, password, success, error)
@@ -49,6 +49,9 @@ export default class UserDialog extends Component{
     }
     let error = (error)=>{
       switch(error.code){
+        default:
+        alert(error)
+        break   
         case 210:
         alert('用户名与密码不匹配')
         break
@@ -61,9 +64,6 @@ export default class UserDialog extends Component{
         case 211:
         alert('找不到用户')
         break
-        default:
-        alert(error)
-        break    
       }
     }
     signIn(username, password, success, error)
@@ -106,6 +106,8 @@ export default class UserDialog extends Component{
         </div>
         <div className="row actions">
           <button type="submit">登录</button>
+          // eslint-disable-next-line
+          <a href="javascript:;">忘记密码了？</a>
         </div>
       </form>
     ) 
