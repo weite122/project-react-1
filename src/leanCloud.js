@@ -28,6 +28,7 @@ export function signUp(email,username, password, successFn, errorFn){
   return undefined
 
 }
+
 export function signIn(username, password, successFn, errorFn){
    AV.User.logIn(username, password).then(function (loginedUser) {
      let user = getUserFromAVUser(loginedUser)
@@ -36,6 +37,7 @@ export function signIn(username, password, successFn, errorFn){
      errorFn.call(null, error)
    })
  }
+
 export function getCurrentUser(){
   let user = AV.User.current()
   if(user){
@@ -44,10 +46,19 @@ export function getCurrentUser(){
     return null
   }
 }
+
 export function signOut(){
   AV.User.logOut()
   return undefined
 }
+
+export function sendPasswordResetEmail(email, successFn, errorFn){
+   AV.User.requestPasswordReset(email).then(function (success) {
+     successFn.call() 
+   }, function (error) {
+     console.dir(error)
+   })
+ }
 
 function getUserFromAVUser(AVUser){
   return {
