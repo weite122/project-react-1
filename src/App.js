@@ -5,22 +5,7 @@ import './App.css';
 import TodoInput from './TodoInput'
 import TodoItem from './TodoItem'
 import UserDialog from './UserDialog'
-import {getCurrentUser, signOut} from './leanCloud'
-import AV from './leanCloud'
-
-// 声明类型
-var TodoFolder = AV.Object.extend('TodoFolder');
-// 新建对象
-var todoFolder = new TodoFolder();
-// 设置名称
-todoFolder.set('name','工作');
-// 设置优先级
-todoFolder.set('priority',1);
-todoFolder.save().then(function (todo) {
-  console.log('objectId is ' + todo.id);
-}, function (error) {
-  console.error(error);
-});
+import {getCurrentUser, signOut,TodoModel} from './leanCloud'
 
 
 class App extends Component {
@@ -91,31 +76,32 @@ class App extends Component {
     })
   }
   addTodo(event){
-    this.state.todoList.push({
-      id: idMaker(),
+  let newTodo = {
       title: event.target.value,
       status: null,
       deleted: false
-    })
-    this.setState({
-      newTodo: '',
-      todoList: this.state.todoList
-    })
   }
+  TodoModel.create(newTodo, (id) => {
+       newTodo.id = id
+       this.state.todoList.push(newTodo)
+       this.setState({
+         newTodo: '',
+         todoList: this.state.todoList
+       })
+     }, (error) => {
+       console.log(error)
+     })
+    }       
   delete(event, todo){
     todo.deleted = true
     this.setState(this.state) 
   }
 }
 
-export default App;
-
-let id = 0
-
-function idMaker(){
-  id += 1
-  return id
-}
 function JsonConvert(obj){
   return JSON.parse(JSON.stringify(obj))
 }
+
+export default App;
+
+
