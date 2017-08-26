@@ -24,12 +24,12 @@ export default class SignInOrSignUp extends Component {
             <input type="radio" value="signUp" className="hidestyle"
               checked={this.state.selected === 'signUp'}
               onChange={this.switch.bind(this)}
-            /> 注册</label>
+            /> Register</label>
           <label>
             <input type="radio" value="signIn" className="hidestyle"
               checked={this.state.selected === 'signIn'}
               onChange={this.switch.bind(this)}
-            /> 登录</label>
+            /> Login</label>
         </nav>
         <div className="panes">
           {this.state.selected === 'signUp' ?
