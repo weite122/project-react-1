@@ -74,6 +74,8 @@ export default class UserDialog extends Component{
   render(){
     return (
       <div className="UserDialog-Wrapper">
+      <h1 className="backgroundWord">Where there is ruin,
+    there is hope for treasure.</h1>
         <div className="UserDialog">
           {
             this.state.selectedTab === 'signInOrSignUp' ?
