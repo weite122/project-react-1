@@ -42,7 +42,14 @@
     cursor: pointer;
 }
 .UserDialog .signInOrSignUp>nav>label.active{
-    font-size:30px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ded74d;
+}
+.UserDialog .signInOrSignUp>nav>label:hover{
+    font-size: 24px;
+    font-weight: 700;
+    color: #ded74d;
 }
 .UserDialog .signInOrSignUp>.panes {
     padding: 0 1em 1em;
@@ -58,7 +65,7 @@
 
 .UserDialog form>.row {
     display: flex;
-    padding: .3em 0;
+    padding: .8em 0;
 }
 
 .UserDialog form>.row>label:first-child {

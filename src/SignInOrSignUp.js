@@ -6,7 +6,7 @@ export default class SignInOrSignUp extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      selected: 'signUp'
+      selected: 'signUp',
     }
   }
 
@@ -20,12 +20,12 @@ export default class SignInOrSignUp extends Component {
     return (
       <div className="signInOrSignUp">
         <nav>
-          <label>
+          <label  className={this.state.selected === "signUp" ? "active" : null}>
             <input type="radio" value="signUp" className="hidestyle"
               checked={this.state.selected === 'signUp'}
               onChange={this.switch.bind(this)}
             /> Register</label>
-          <label>
+          <label className={this.state.selected === "signIn" ? "active" : null}>
             <input type="radio" value="signIn" className="hidestyle"
               checked={this.state.selected === 'signIn'}
               onChange={this.switch.bind(this)}
@@ -50,3 +50,4 @@ export default class SignInOrSignUp extends Component {
     )
   }
 }
+
