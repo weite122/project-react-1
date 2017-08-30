@@ -46,11 +46,7 @@
     font-weight: 700;
     color: #ded74d;
 }
-.UserDialog .signInOrSignUp>nav>label:hover{
-    font-size: 24px;
-    font-weight: 700;
-    color: #ded74d;
-}
+
 .UserDialog .signInOrSignUp>.panes {
     padding: 0 1em 1em;
 }
@@ -75,11 +71,13 @@
     padding: 3px;
 }
 
-.UserDialog form>.row>label:nth-child(2) {
+.UserDialog form>.row>input:nth-child(2) {
     border: none;
     outline: none;
-    padding: 3px 5px;
-    border-radius: 3px;
+    background: transparent;
+    border-bottom: 1px solid #5b943b;
+    padding-left: .5em;
+    color: #ded74d;
 }
 
 .hidestyle {

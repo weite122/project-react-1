@@ -18,6 +18,17 @@ export default class UserDialog extends Component{
   signUp(e){
     e.preventDefault()
     let {email, username, password} = this.state.formData
+
+    if(username.length < 3){
+      alert('用户名长度至少为3个字符，请重新填写')
+      return
+    }else if(password.length < 6){
+      alert('密码长度至少为6位,请重新填写')
+      return
+    }else if(email.match(/^[\w-]+@[\w-]+(\.[\w-]+)+$/) === false){
+      alert('请填写正确的邮箱地址')
+      return
+    }
     let success = (user)=>{
       this.props.onSignUp.call(null, user)
     }
