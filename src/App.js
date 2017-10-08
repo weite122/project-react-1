@@ -14,6 +14,10 @@ class App extends Component {
     this.state = {
       user: getCurrentUser() || {},
       newTodo: '',
+      newGroup: '',
+      groups: [],
+      currentGroup: '',
+      asideOpend: true,
       todoList: []
     }
     let user = getCurrentUser()
