@@ -5,6 +5,7 @@
     background-image: -webkit-gradient(linear,0 0,0 bottom,from(#fff),to(#bcbcbc));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
   }
   
 .UserDialog-Wrapper {
@@ -20,6 +21,7 @@
     align-items: center;
     flex-direction: column;
     background: #403f3f;
+    z-index: 2;
 }
 
 .UserDialog {
