@@ -1,5 +1,10 @@
 ## [预览效果](https://weite122.github.io/project-react-1/build/index.html)
 
+
+![DeepinScreenshot_select-area_20171008231903.png](https://i.loli.net/2017/10/09/59db933065783.png)
+![DeepinScreenshot_select-area_20171009095917.png](https://i.loli.net/2017/10/09/59db93306ab23.png)
+
+
 ### 功能介绍: 
 
 * 注册与登录: 注册账号进行登录,通过leanCloud记录账号的所创建的待办事项
