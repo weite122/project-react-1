@@ -21,6 +21,7 @@
   border: none;
   padding: 5px;
   font-size: 28px;
+  cursor: pointer;
 }
 .App> .todoList> li:nth-child(odd){
   background: #eee;
